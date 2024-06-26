@@ -21,7 +21,7 @@ kbc_token = st.secrets["keboola_token"]
 openai_token = st.secrets["openai_token"]
 read_bucket = st.secrets["read_bucket"]
 write_bucket = st.secrets["write_bucket"]
-LOGO_IMAGE_PATH = os.path.abspath("./static/keboola.png")
+LOGO_IMAGE_PATH = os.path.abspath("./app/static/keboola.png")
 
 client = Client(kbc_url, kbc_token)
 
