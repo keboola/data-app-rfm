@@ -17,7 +17,7 @@ st.set_page_config(page_title="RFM DataApp")
 
 # Constants
 kbc_url = st.secrets["kbc_url"]
-kbc_token = st.secrets["kbc_token"]
+kbc_token = st.secrets["keboola_token"]
 openai_token = st.secrets["openai_token"]
 read_bucket = st.secrets["read_bucket"]
 write_bucket = st.secrets["write_bucket"]
