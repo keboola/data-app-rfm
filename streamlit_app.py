@@ -719,18 +719,24 @@ def recalculate(what):
         st.session_state.pop("detailed_detailed_rfm", None)
         st.session_state.pop("detailed_overview_insights", None)
         st.session_state.pop("detailed_movements_insights", None)
-        st.session_state.pop("detailed_deepdive_recency_insights")
-        st.session_state.pop("detailed_deepdive_frequency_insights")
-        st.session_state.pop("detailed_deepdive_monetary_insights")
+        if "detailed_deepdive_recency_insights" in st.session_state:
+            st.session_state.pop("detailed_deepdive_recency_insights")
+        if "detailed_deepdive_frequency_insights" in st.session_state:
+            st.session_state.pop("detailed_deepdive_frequency_insights")
+        if "detailed_deepdive_monetary_insights" in st.session_state:
+            st.session_state.pop("detailed_deepdive_monetary_insights")
     st.session_state.pop("simple_detailed_rfm", None)
     st.session_state.pop("simple_segmented_rfm", None)
     st.session_state.pop("simple_overview_insights", None)
     st.session_state.pop("simple_movements_insights", None)
     st.session_state.pop("simple_segments_tips", None)
     st.session_state.pop("detailed_segments_tips", None)
-    st.session_state.pop("simple_deepdive_recency_insights")
-    st.session_state.pop("simple_deepdive_frequency_insights")
-    st.session_state.pop("simple_deepdive_monetary_insights")
+    if "simple_deepdive_recency_insights" in st.session_state:
+        st.session_state.pop("simple_deepdive_recency_insights")
+    if "simple_deepdive_frequency_insights" in st.session_state:
+        st.session_state.pop("simple_deepdive_frequency_insights")
+    if "simple_deepdive_monetary_insights" in st.session_state:
+        st.session_state.pop("simple_deepdive_monetary_insights")
 
 
 def reload_data():
